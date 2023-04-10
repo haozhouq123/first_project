@@ -1,0 +1,52 @@
+{
+  "groups": [
+    {
+      "name": "filtersetting",
+      "type": "cn.glutaa.config.InterceptorConfig",
+      "sourceType": "cn.glutaa.config.InterceptorConfig"
+    },
+    {
+      "name": "wechatkey",
+      "type": "cn.glutaa.service.core.AuthenticationService",
+      "sourceType": "cn.glutaa.service.core.AuthenticationService"
+    }
+  ],
+  "properties": [
+    {
+      "name": "filtersetting.filter-url",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.glutaa.config.InterceptorConfig"
+    },
+    {
+      "name": "filtersetting.pass-url",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "cn.glutaa.config.InterceptorConfig"
+    },
+    {
+      "name": "wechatkey.app-id",
+      "type": "java.lang.String",
+      "sourceType": "cn.glutaa.service.core.AuthenticationService"
+    },
+    {
+      "name": "wechatkey.redis-service",
+      "type": "cn.glutaa.service.core.RedisService",
+      "sourceType": "cn.glutaa.service.core.AuthenticationService"
+    },
+    {
+      "name": "wechatkey.req-url",
+      "type": "java.lang.String",
+      "sourceType": "cn.glutaa.service.core.AuthenticationService"
+    },
+    {
+      "name": "wechatkey.request-service",
+      "type": "cn.glutaa.service.core.IHttpRequestService",
+      "sourceType": "cn.glutaa.service.core.AuthenticationService"
+    },
+    {
+      "name": "wechatkey.secret",
+      "type": "java.lang.String",
+      "sourceType": "cn.glutaa.service.core.AuthenticationService"
+    }
+  ],
+  "hints": []
+}

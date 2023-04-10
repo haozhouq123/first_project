@@ -1,0 +1,45 @@
+server:
+  port: 8083
+################
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  #### jpa
+  jpa:
+    hibernate:
+      ddl-auto: update # 自动生成数据库表
+    show-sql: true # 在控制台显示Hibernate的sql(可选)
+  #### mysql
+  datasource:
+    url: jdbc:mysql://82.157.255.160:3308/test
+    username: user
+    password: user
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #### redis
+  redis:
+    host: 82.157.255.160 #127.0.0.1
+    port: 6379
+    password: root
+
+################ 自定义Bean
+
+#### 拦截器拦截参数
+filtersetting:
+  filterUrl:
+    - /** #默认拦截所有url
+  passUrl: #放行url
+    - /swagger-ui/** #swagger
+    - /swagger-resources/** #swagger
+    - /webjars/** #swagger
+    - /v3/** #swagger
+    - /user/login #登录
+    - /user/register #注册
+    - /core/getVerificationCode #短信验证码
+    - /core/getCaptcha #图形验证码
+
+#### 微信用户身份验证参数
+wechatkey:
+  appId: wx4c56976d610f3f2a
+  secret: 96fd6a832a1bbdacc7f33789d77fbd85
+  reqUrl: https://api.weixin.qq.com/sns/jscode2session
